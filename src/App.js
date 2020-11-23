@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SignIn from './SignIn'
 import SignUp from './SignUp'
+import SearchBar from './SearchBar'
 function App() {
   return (
     <div className="App">
@@ -19,8 +20,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      {/* <SignIn /> */}
-      <SignUp />
+      <SignIn />
+      {/* <SearchBar /> */}
     </div>
   );
 }
