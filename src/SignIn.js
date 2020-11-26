@@ -9,18 +9,19 @@ import {Card,
     InputAdornment} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {AccountCircle, Lock, Visibility, VisibilityOff} from '@material-ui/icons';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Navbar from './Navbar.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flex: 1,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         flexWrap: 'wrap',
         flexDirection: 'column',
         alignItems: 'center',
         height: '100%', 
-        backgroundColor: '#8e7b6b',
+        backgroundColor: '#ad9baa',
       },
     card: {
         width: 300,
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 260,
         boxShadow: '0 0 0.3rem 0.4rem rgba(0,0,0,.1)',
         padding: 30,
-        backgroundColor: '#fbf7f5'
+        backgroundColor: '#fof7f4'
     },
     margin: {
       margin: theme.spacing(1),
@@ -61,8 +62,10 @@ export default function SignIn(){
         event.preventDefault();
       };
     return(
+        <div>
+        <Navbar /> 
         <div className={classes.root}>
-            
+                {/* <img src = {require('./logo.jpg')} height = '100' width = '400' style = {{marginTop: '10%'}}/> */}
             <Card className={classes.card} variant="outlined">
              <CardContent>
                  <Typography className = {classes.title}> 
@@ -112,16 +115,17 @@ export default function SignIn(){
              </CardContent>
              <CardActions style = {{justifyContent: 'center'}}>
                  {/* <Link to = '/' style = {{textDecoration: 'none '}}> */}
-                 <Button size="medium" variant="contained" style= {{backgroundColor: '#e7a488', fontWeight: '600'}}>Sign In</Button>
+                 <Button size="medium" variant="contained" style= {{backgroundColor: '#0b5563', color: 'white',fontWeight: '600'}}>Sign In</Button>
                  {/* </Link> */}
                 {/* <Link to = '/signup' style = {{textDecoration: 'none'}}> */}
                     <Button size="medium" variant="contained" 
-                        style= {{backgroundColor: '#e7a488', fontWeight: '600'}}>
+                        style= {{backgroundColor: '#0b5563',color: 'white', fontWeight: '600'}}>
                         Sign Up
                     </Button>
                 {/* </Link> */}
             </CardActions>
         </Card>
+        </div>
         </div>
     );
 }

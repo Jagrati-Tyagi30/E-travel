@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import SignIn from './SignIn'
 import SignUp from './SignUp'
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar';
+import LandingPage from './LandingPage.js';
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,9 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <SignIn />
+      
+      {/* <SignIn /> */}
+      <LandingPage />
       {/* <SearchBar /> */}
     </div>
   );
