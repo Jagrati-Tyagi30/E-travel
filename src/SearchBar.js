@@ -1,13 +1,12 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
-import {Card, 
-    FormControl,
+import {FormControl,
     InputLabel,
     Select,
+    Button,
     MenuItem,
     InputBase,
-    TextField,
     Typography} from '@material-ui/core';
 import {AccountCircle, Lock, Face, Email} from '@material-ui/icons';
 import DatePicker from 'react-date-picker';
@@ -61,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
      display: 'inline-block', 
      borderWidth: 3, 
      borderColor: 'black', 
-     backgroundColor: '#fof7f4', 
+     backgroundColor: '#ffffff', 
      boxShadow: '5px 10px #888888'
   },
   formControl: {
@@ -97,7 +96,7 @@ export default function SearchBar(){
     };
     return(
     <div className={classes.root}>
-     <div style = {{width: 900, height: 180, display: 'inline-block', borderWidth: 3, borderColor: 'black', backgroundColor: '#ffffff', boxShadow: '5px 10px #888888'}}>
+     <div className = {classes.searchBar}>
         <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -164,6 +163,7 @@ export default function SearchBar(){
           <MenuItem value={10}>10</MenuItem>
         </Select>
       </FormControl>
+      <Button style = {{marginLeft: 15, backgroundColor: '#0b5563', color: 'white'}}>Search</Button>
      </div>
     </div>
     );
