@@ -6,20 +6,11 @@ import {Card,
     InputLabel,
     Select,
     MenuItem,
-    Button, 
-    IconButton, 
-    Typography, 
     InputBase,
-    TextField, 
-    InputAdornment} from '@material-ui/core';
-// import DateFnsUtils from '@date-io/date-fns';
+    TextField,
+    Typography} from '@material-ui/core';
 import {AccountCircle, Lock, Face, Email} from '@material-ui/icons';
-// import Navbar from './Navbar.js'
-// import Footer from './footer.js';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-  } from '@material-ui/pickers';
+import DatePicker from 'react-date-picker';
 import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     border: 'black',
-    backgroundColor: fade(theme.palette.common.black, 0.15),
+    backgroundColor: fade(theme.palette.common.black, 0.35),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.black, 0.25),
+      backgroundColor: fade(theme.palette.common.black, 0.45),
     },
     marginRight: theme.spacing(2),
     width: '100%',
@@ -39,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
+    marginTop: '1%'
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -54,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: theme.spacing(1, 1, 1, 1),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
@@ -62,6 +54,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: '20ch',
       },
+  },
+  searchBar: {
+     width: 900, 
+     height: 180, 
+     display: 'inline-block', 
+     borderWidth: 3, 
+     borderColor: 'black', 
+     backgroundColor: '#fof7f4', 
+     boxShadow: '5px 10px #888888'
   },
   formControl: {
     margin: theme.spacing(1),
@@ -74,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar(){
     const classes = useStyles();
-    const [selectedInDate, setSelectedInDate] = React.useState(new Date('2020-08-18T21:11:54'));
+    const [selectedInDate, setSelectedInDate] = React.useState(new Date());
 
     const [adults, setAdults] = React.useState('');
 
@@ -89,57 +90,42 @@ export default function SearchBar(){
     const handleInDateChange = (Indate) => {
       setSelectedInDate(Indate);
     };
-    const [selectedOutDate, setSelectedOutDate] = React.useState(new Date('2014-08-18T21:11:54'));
+    const [selectedOutDate, setSelectedOutDate] = React.useState(new Date());
 
     const handleOutDateChange = (Outdate) => {
       setSelectedOutDate(Outdate);
     };
     return(
     <div className={classes.root}>
-     <Card>
+     <div style = {{width: 900, height: 180, display: 'inline-block', borderWidth: 3, borderColor: 'black', backgroundColor: '#ffffff', boxShadow: '5px 10px #888888'}}>
         <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Which area?"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
+        </div><br />
+        <div style = {{display: 'inline-block'}}>
+        <Typography style = {{textAlign: 'left'}}>From <span style = {{marginLeft: 132}}>To</span></Typography>
+        <DatePicker
+        onChange={handleInDateChange}
+        value={selectedInDate}
+        calendarAriaLabel = "In-Date"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      {/* <Typography>To</Typography> */}
+        <DatePicker 
+        onChange={handleOutDateChange}
+        value={selectedOutDate}
+      />&nbsp;&nbsp;
         </div>
-    <MuiPickersUtilsProvider >
-     <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="dd/MM/yyyy"
-          margin="normal"
-          id="Check in Date"
-          label="Check in Date"
-          value={selectedInDate}
-          onChange={handleInDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-        <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="dd/MM/yyyy"
-          margin="normal"
-          id="Check out Date"
-          label="Check out Date"
-          value={selectedOutDate}
-          onChange={handleOutDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-        </MuiPickersUtilsProvider>
         <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label">#Adults</InputLabel>
+        <InputLabel id="demo-simple-select-label" style = {{color: 'black'}}>#Adults</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -159,7 +145,7 @@ export default function SearchBar(){
         </Select>
       </FormControl>
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-label" style = {{color: 'black'}}>#Kids</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -178,7 +164,7 @@ export default function SearchBar(){
           <MenuItem value={10}>10</MenuItem>
         </Select>
       </FormControl>
-     </Card>
+     </div>
     </div>
     );
 }

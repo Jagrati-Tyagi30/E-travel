@@ -12,9 +12,9 @@ import Navbar from './Navbar.js';
 
 export default function LandingPage(){
     return(
-    <div>
+    <div style = {{backgroundColor: '#ad9baa'}}>
         <Navbar />
-        <div style = {{backgroundImage: "url(" + require("./landingPage.jpeg") + ")", marginTop: '5%', width: 1450, height: 200,}}>
+        <div style = {{backgroundImage: "url(" + require("./landingPage.jpeg") + ")", marginTop: '5%', width: 1450, height: 500,}}>
         <Grid container >
         <Grid item xs style = {{textAlign: 'center', marginTop: '7%', marginLeft: '37%'}}>
             <Typography style = {{fontSize: 40, fontWeight: '500'}}>FIND THE BEST HOTELS</Typography>
@@ -22,8 +22,11 @@ export default function LandingPage(){
             <Typography style = {{fontSize: 40, fontWeight: '500'}}>BEST PRICE</Typography>
         </Grid>
         </Grid>
-        </div><br /><br /><br />
-        <div style = {{marginTop: '10%'}}>
+        </div>
+        <div>
+            <SearchBar />
+        </div>
+        <div style = {{marginTop: '3%'}}>
             <Typography style = {{fontSize: 30}}>TOP 3 HOTELS</Typography><br />
             <Grid container spacing = {8} style = {{paddingLeft: 70, paddingRight: 70}}>
                 <Grid item  xs> 
