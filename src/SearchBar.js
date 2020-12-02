@@ -110,7 +110,7 @@ export default function SearchBar(){
               inputProps={{ 'aria-label': 'search' }}
             />
         </div><br />
-        <div style = {{display: 'inline-block'}}>
+        <div style = {{display: 'inline-block', marginLeft: '10%'}}>
         <Typography style = {{textAlign: 'left'}}>From <span style = {{marginLeft: 132}}>To</span></Typography>
         <DatePicker
         onChange={handleInDateChange}

@@ -40,23 +40,19 @@ export default function Navbar() {
       <div >
       <AppBar position="fixed" style = {{background: '#120309', padding: 8}}>
         <Toolbar>
+            <Link to = '/' style = {{textDecoration: 'none'}}>
               <Typography className={classes.title}  style = {{marginRight: 1000}} >
             HOTELIER
           </Typography>
+          </Link>
           <Button className = {classes.button}>Your Bookings</Button>
-          <IconButton
-            edge="end"
-            color="inherit"
-            // aria-label="open drawer"
-          ><ShoppingCart style = {{color: 'white'}}/></IconButton>
-          {/* </Link> */}
-          {/* <Link to = '/signin'> */}
+          <Link to = '/signin'>
           <IconButton
             edge="end"
             color="inherit"
             // aria-label="open drawer"
           ><AccountCircle style = {{color: 'white'}}/></IconButton>
-          {/* </Link> */}
+          </Link>
         </Toolbar>
       </AppBar>
       </div>

@@ -8,7 +8,7 @@ import {Card,
     InputAdornment} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {AccountCircle, Lock, Face, Email} from '@material-ui/icons';
-// import Navbar from './Navbar.js'
+import Navbar from './Navbar.js'
 // import Footer from './footer.js';
 import {Link} from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh', 
-        backgroundColor: '#8e7b6b',
+        backgroundColor: '#ad9baa',
       },
     card: {
         width: 300,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         // marginBottom: 20,
         boxShadow: '0 0 0.3rem 0.4rem rgba(0,0,0,.1)',
         padding: 20,
-        backgroundColor: '#fbf7f5'
+        backgroundColor: '#fof7f4'
     },
     margin: {
       margin: theme.spacing(1),
@@ -57,6 +57,8 @@ export default function SignUp(){
         setValues({ ...values, [prop]: event.target.value });
     };
     return(
+        <div>
+            <Navbar />
         <div className = {classes.root}>
             <Card className={classes.card} variant="outlined">
              <CardContent>
@@ -129,11 +131,12 @@ export default function SignUp(){
                 /><br /><br />
              </CardContent>
              <CardActions style = {{justifyContent: 'center'}}>
-                 {/* <Link to = '/' style = {{textDecoration: 'none'}}> */}
-                 <Button size="medium" variant="contained" style= {{backgroundColor: '#e7a488', fontWeight: '600'}} >Sign Up</Button>
-                 {/* </Link> */}
+                 <Link to = '/' style = {{textDecoration: 'none'}}>
+                 <Button size="medium" variant="contained" style= {{backgroundColor: '#0b5563', fontWeight: '600', color: 'white'}} >Sign Up</Button>
+                 </Link>
             </CardActions>
         </Card>
+        </div>
         </div>
     );
 }

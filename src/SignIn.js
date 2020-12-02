@@ -114,15 +114,15 @@ export default function SignIn(){
                 {/* </FormControl> */}
              </CardContent>
              <CardActions style = {{justifyContent: 'center'}}>
-                 {/* <Link to = '/' style = {{textDecoration: 'none '}}> */}
+                 <Link to = '/' style = {{textDecoration: 'none '}}>
                  <Button size="medium" variant="contained" style= {{backgroundColor: '#0b5563', color: 'white',fontWeight: '600'}}>Sign In</Button>
-                 {/* </Link> */}
-                {/* <Link to = '/signup' style = {{textDecoration: 'none'}}> */}
+                 </Link>
+                <Link to = '/signup' style = {{textDecoration: 'none'}}>
                     <Button size="medium" variant="contained" 
                         style= {{backgroundColor: '#0b5563',color: 'white', fontWeight: '600'}}>
                         Sign Up
                     </Button>
-                {/* </Link> */}
+                </Link>
             </CardActions>
         </Card>
         </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import {Card, 
     CardMedia, 
     CardContent, 
-    Button, 
     Typography, 
     Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '5%', 
         width: 1450, 
         height: 500,
+        justifyContent: 'center'
     },
     grid: {
         textAlign: 'center', 
@@ -41,11 +41,11 @@ export default function LandingPage(){
         </Grid>
         </Grid>
         </div>
-        <div>
+        <div style = {{marginLeft: '20%'}}>
             <SearchBar />
         </div>
         <div style = {{marginTop: '3%'}}>
-            <Typography style = {{fontSize: 30}}>TOP 3 HOTELS</Typography><br />
+            <Typography style = {{fontSize: 30, textAlign: 'center'}}>TOP 3 HOTELS</Typography><br />
             <Grid container spacing = {8} style = {{paddingLeft: 70, paddingRight: 70}}>
                 <Grid item  xs> 
                     <Card>
