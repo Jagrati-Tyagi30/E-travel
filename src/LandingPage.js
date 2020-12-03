@@ -69,6 +69,7 @@ export default function LandingPage(){
                     </Link>
                 </Grid>
                 <Grid item xs>
+                <Link to = '/hotelpage' style = {{textDecoration: 'none'}}>
                     <Card>
                     <CardMedia
                             // className={classes.media}
@@ -84,8 +85,10 @@ export default function LandingPage(){
                             <Grade />
                         </CardContent>
                     </Card>
+                    </Link>
                 </Grid>
                 <Grid item xs>
+                <Link to = '/hotelpage' style = {{textDecoration: 'none'}}>
                     <Card>
                     <CardMedia
                             // className={classes.media}
@@ -101,6 +104,7 @@ export default function LandingPage(){
                             <Grade />
                         </CardContent>
                     </Card>
+                    </Link>
                 </Grid>
             </Grid>
         </div><br /><br /><br />
