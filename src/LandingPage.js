@@ -9,13 +9,14 @@ import {Grade} from '@material-ui/icons';
 import SearchBar from './SearchBar.js';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js'
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     landing: {
-        backgroundImage: "url(" + require("./landingPage.jpeg") + ")", 
+        backgroundImage: "url(" + require("./images/landingPage.jpeg") + ")", 
         marginTop: '5%', 
         width: 1450, 
         height: 500,
@@ -49,10 +50,11 @@ export default function LandingPage(){
             <Typography style = {{fontSize: 30, textAlign: 'center'}}>TOP 3 HOTELS</Typography><br />
             <Grid container spacing = {8} style = {{paddingLeft: 70, paddingRight: 70}}>
                 <Grid item  xs> 
+                    <Link to = '/hotelpage' style = {{textDecoration: 'none'}}>
                     <Card>
                         <CardMedia style = {{width: 70, height: 50}}
                             // className={classes.media}
-                            image={require("./hotel1.jpg")}
+                            image={require("./images/hotel1.jpg")}
                             title="hotel1"
                         />
                         <CardContent>
@@ -64,12 +66,13 @@ export default function LandingPage(){
                             <Grade style = {{color:'#0b5563'}}/>
                         </CardContent>
                     </Card>
+                    </Link>
                 </Grid>
                 <Grid item xs>
                     <Card>
                     <CardMedia
                             // className={classes.media}
-                            image={require("./hotel2.jpg")}
+                            image={require("./images/hotel2.jpg")}
                             title="hotel2"
                         />
                         <CardContent>
@@ -86,7 +89,7 @@ export default function LandingPage(){
                     <Card>
                     <CardMedia
                             // className={classes.media}
-                            image={require("./hotel1.jpg")}
+                            image={require("./images/hotel1.jpg")}
                             title="hotel1"
                         />
                         <CardContent>

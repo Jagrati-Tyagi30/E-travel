@@ -37,9 +37,9 @@ export default function Footer() {
           </Grid>
         </Grid>
         <Grid item xs = '2' style = {{ marginTop: 20}}>
-            <a href='#'><img src = {require("./instagram.png")} style = {{width: 30, height: 30, marginRight: 10}}/></a>
-            <a href='#'><img src = {require("./facebook.png")} style = {{width: 30, height: 30, marginRight: 10}}/></a>
-            <a href='#'><img src = {require("./twitter.png")} style = {{width: 30, height: 30}}/></a>
+            <a href='#'><img src = {require("./images/instagram.png")} style = {{width: 30, height: 30, marginRight: 10}}/></a>
+            <a href='#'><img src = {require("./images/facebook.png")} style = {{width: 30, height: 30, marginRight: 10}}/></a>
+            <a href='#'><img src = {require("./images/twitter.png")} style = {{width: 30, height: 30}}/></a>
         </Grid>
           <p style = {{marginLeft: 38, color: 'white'}}>
             &copy;{new Date().getFullYear()} HOTELIER | All rights reserved |
