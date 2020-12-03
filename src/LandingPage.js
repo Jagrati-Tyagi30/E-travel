@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Grade} from '@material-ui/icons';
 import SearchBar from './SearchBar.js';
 import Navbar from './Navbar.js';
+import Footer from './Footer.js'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -99,7 +100,8 @@ export default function LandingPage(){
                     </Card>
                 </Grid>
             </Grid>
-        </div>
+        </div><br /><br /><br />
+        <Footer />
     </div>
     );
 }

@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {AccountCircle, Lock, Visibility, VisibilityOff} from '@material-ui/icons';
 import {Link} from 'react-router-dom';
 import Navbar from './Navbar.js';
+import Footer from './Footer.js'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         width: 300,
         height: 250,
         marginTop: 260,
-        marginBottom: 260,
+        marginBottom: 230,
         boxShadow: '0 0 0.3rem 0.4rem rgba(0,0,0,.1)',
         padding: 30,
         backgroundColor: '#fof7f4'
@@ -126,6 +127,7 @@ export default function SignIn(){
             </CardActions>
         </Card>
         </div>
+        <Footer />
         </div>
     );
 }

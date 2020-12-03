@@ -9,7 +9,7 @@ import {Card,
 import { makeStyles } from '@material-ui/core/styles';
 import {AccountCircle, Lock, Face, Email} from '@material-ui/icons';
 import Navbar from './Navbar.js'
-// import Footer from './footer.js';
+import Footer from './Footer.js';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -137,6 +137,7 @@ export default function SignUp(){
             </CardActions>
         </Card>
         </div>
+        <Footer />
         </div>
     );
 }
