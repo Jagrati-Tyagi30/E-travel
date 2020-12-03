@@ -163,7 +163,8 @@ export default function SearchBar(){
           <MenuItem value={10}>10</MenuItem>
         </Select>
       </FormControl>
-      <Button style = {{marginLeft: 15, backgroundColor: '#0b5563', color: 'white'}}>Search</Button>
+      <Link to = '/hotellist' style = {{textDecoration: 'none'}}>
+      <Button style = {{marginLeft: 15, backgroundColor: '#0b5563', color: 'white'}}>Search</Button></Link>
      </div>
     </div>
     );

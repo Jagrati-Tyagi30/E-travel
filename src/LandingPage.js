@@ -5,7 +5,7 @@ import {Card,
     Typography, 
     Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import {Grade} from '@material-ui/icons';
+import {Star} from '@material-ui/icons';
 import SearchBar from './SearchBar.js';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js'
@@ -59,11 +59,11 @@ export default function LandingPage(){
                         />
                         <CardContent>
                             <Typography>Taj Palace</Typography>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
                         </CardContent>
                     </Card>
                     </Link>
@@ -78,11 +78,11 @@ export default function LandingPage(){
                         />
                         <CardContent>
                             <Typography>Renaissance Hotel</Typography>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade />
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star />
                         </CardContent>
                     </Card>
                     </Link>
@@ -97,11 +97,11 @@ export default function LandingPage(){
                         />
                         <CardContent>
                             <Typography>Renaissance Hotel</Typography>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade style = {{color:'#0b5563'}}/>
-                            <Grade />
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star style = {{color:'#0b5563'}}/>
+                            <Star />
                         </CardContent>
                     </Card>
                     </Link>
