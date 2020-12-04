@@ -8,7 +8,6 @@ import {FormControl,
     MenuItem,
     InputBase,
     Typography} from '@material-ui/core';
-import {AccountCircle, Lock, Face, Email} from '@material-ui/icons';
 import DatePicker from 'react-date-picker';
 import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({

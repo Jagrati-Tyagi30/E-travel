@@ -1,12 +1,10 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import SearchIcon from '@material-ui/icons/Search';
-import {AccountCircle, ShoppingCart, Book} from '@material-ui/icons';
+import {  makeStyles } from '@material-ui/core/styles';
+import {AccountCircle} from '@material-ui/icons';
 import {AppBar, 
       Toolbar, 
       IconButton, 
       Typography, 
-      InputBase,
       Button, } from '@material-ui/core';
   import {Link} from'react-router-dom';
 
@@ -45,7 +43,9 @@ export default function Navbar() {
             HOTELIER
           </Typography>
           </Link>
-          <Button className = {classes.button}>Your Bookings</Button>
+          <Link to = '/bookings' style ={{textDecoration: 'none'}}>
+            <Button className = {classes.button}>Your Bookings</Button>
+          </Link>
           <Link to = '/signin'>
           <IconButton
             edge="end"

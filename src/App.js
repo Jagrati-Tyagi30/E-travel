@@ -8,6 +8,7 @@ import SignUp from './SignUp'
 import LandingPage from './LandingPage.js';
 import HotelPage from './HotelPage.js';
 import HotelList from './HotelList.js';
+import Bookings from './Bookings.js';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path = '/hotellist'>
             <HotelList/>
+          </Route>
+          <Route path = '/bookings'>
+            <Bookings/>
           </Route>
           <Route path = '/'>
             <LandingPage />
